@@ -1,6 +1,6 @@
 ###############################################
 #
-# install alpine with podmab in qemu x86_64
+# install alpine with podman in qemu x86_64
 #
 
 # Wait enough (forever) until a long-time boot

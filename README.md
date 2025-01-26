@@ -23,10 +23,9 @@ $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/malteschoen/podman-qem
 ```bash
 $ pkg update
 $ pkg install git
-$ git clone https://github.com/malteschoen/podmsn-qemu-arm.git
-$ cd docker-qemu-arm
-$ cp config.sample config.env
-$ # vi config.env # change everything you want to need to change
+$ git clone https://github.com/malteschoen/podman-qemu-arm.git
+$ cd podman-qemu-arm
+$ # nano config.env # change everything you want to need to change
 $ ./install.sh
 ```
 
@@ -40,7 +39,7 @@ $ ./startqemu.sh
 ## Postinstall & fun
 
 - you can ssh to the VM with a 2nd Terminal and `ssh2qemu.sh` qemukey / qemukey.ssh are the generated SSH keys
-- run a `uname -a` and a `docker run hello-world`
+- run a `uname -a` and a `podman run docker.io/hello-world`
 
 ## Thanks
 
