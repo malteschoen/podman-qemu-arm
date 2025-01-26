@@ -1,6 +1,6 @@
 ###############################################
 #
-# install alpine with docker in qemu x86_64
+# install alpine with podmab in qemu x86_64
 #
 
 # Wait enough (forever) until a long-time boot
@@ -155,13 +155,13 @@ expect "#"
 send "sed -i 's|^#http://|http://|' /etc/apk/repositories\r"
 
 expect "#"
-send "apk update && apk add docker ip6tables\r"
+send "apk update && apk add podman ip6tables\r"
 
-expect "#"
-send "service docker start\r"
+#expect "#"
+#send "service docker start\r"
 
-expect "#"
-send "rc-update add docker\r"
+#expect "#"
+#send "rc-update add docker\r"
 
 expect "#"
 send "apk add zram-init\r"
