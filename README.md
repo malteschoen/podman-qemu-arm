@@ -1,6 +1,6 @@
-# docker-qemu-arm
+# podman-qemu-arm
 
-Run Docker x86_64 on Android Tablets or Phones
+Run Podman and Docker x86_64 containers on Android Tablets or Phones
 
 Original idea: <https://gist.github.com/oofnikj/e79aef095cd08756f7f26ed244355d62>
 
@@ -14,7 +14,7 @@ This is a automatic installation script. As RAM is always an issue on a cell pho
 ### Quick Install
 
 ```bash
-$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/egandro/docker-qemu-arm/master/termux-setup.sh)"
+$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/malteschoen/podman-qemu-arm/master/termux-setup.sh)"
 # change you alpine root passwort or run the custom installer!
 ```
 
@@ -23,7 +23,7 @@ $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/egandro/docker-qemu-ar
 ```bash
 $ pkg update
 $ pkg install git
-$ git clone https://github.com/egandro/docker-qemu-arm.git
+$ git clone https://github.com/malteschoen/podmsn-qemu-arm.git
 $ cd docker-qemu-arm
 $ cp config.sample config.env
 $ # vi config.env # change everything you want to need to change
@@ -51,18 +51,12 @@ $ ./startqemu.sh
 - Alpine Linux & dns & ipv4 only vs ipv4/6 is (very often) broken.
 - We pin the dns to `8.8.8.8` (can be changed) and in Alpine we turn off ipv6.
 
-Docker can't connect (for reasons only known to qemu/Alpine/Android/Google)
-
-```bash
-alpine:~# docker run hello-world
-docker: error during connect: Head "http://%2Fvar%2Frun%2Fdocker.sock/_ping": read unix @->/var/run/docker.sock: read: connection reset by peer.
-alpine:~# service docker stop
- * Stopping Docker Daemon ...                                                                                                                                              [ ok ]
-alpine:~# service docker start
- * Starting Docker Daemon ...
-```
 
 ## Changelog
+
+### 2025/01/26
+
+- changed to podman
 
 ### 2024/06/28
 
